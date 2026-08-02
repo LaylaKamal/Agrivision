@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#1b5e3b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <title>Agrivision — Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/page-profile.css" />
+  </head>
+  <body class="page-profile-agritech">
+    <div class="app app--profile-agritech app--agritech-shell">
+      <div class="home-agritech-stack">
+        <header class="home-agritech-header">
+          <span class="home-agritech-header__spacer" aria-hidden="true"></span>
+          <h1 class="home-agritech-header__title">Profile</h1>
+          <span class="home-agritech-header__spacer" aria-hidden="true"></span>
+        </header>
+
+        <p class="home-agritech-eyebrow"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Agrivision</p>
+
+        <main class="home-agritech-main profile-agritech-main">
+          <div class="home-agritech-panel home-agritech-panel--profile-body">
+            <div class="profile-content profile-content--in-panel">
+              <div class="profile-identity">
+                <div class="profile-identity__avatar" aria-hidden="true">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+                <h2 class="profile-identity__name">Settings</h2>
+                <p class="profile-identity__hint">Theme preference for this device</p>
+              </div>
+
+              <p class="profile-section-label" id="settings-heading">Appearance</p>
+              <ul class="settings-list" aria-labelledby="settings-heading">
+                <li class="settings-list__theme">
+                  <button
+                    type="button"
+                    class="theme-emoji-only"
+                    id="theme-emoji-btn"
+                    aria-label="Theme"
+                    aria-pressed="false"
+                  >
+                    🌙
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <nav class="bottom-nav bottom-nav--agritech" aria-label="Main navigation">
+        <a href="app.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        <a href="results.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Results</a>
+        <a href="index.html"><i class="fa-solid fa-globe" aria-hidden="true"></i> Site</a>
+      </nav>
+    </div>
+    <script src="js/theme.js" defer></script>
+    <script src="js/pwa-register.js" defer></script>
+  </body>
+</html>

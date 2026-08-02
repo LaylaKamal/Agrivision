@@ -1,0 +1,4 @@
+/* Index (home) — entry point; imports shared layers in cascade order. */
+@import url("base.css");
+@import url("agritech.css");
+@import url("theme-morning.css");

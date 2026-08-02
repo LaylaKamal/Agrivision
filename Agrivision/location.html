@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#1b5e3b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <title>Agrivision — Select Location</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="css/page-location.css?v=18" />
+  </head>
+  <body class="page-location-agritech">
+    <div class="app app--location app--agritech-shell">
+      <div class="home-agritech-stack location-agritech-stack">
+        <header class="results-agritech-top">
+          <a class="results-agritech-top__back" href="app.html" aria-label="Back to app">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </a>
+          <h1 class="results-agritech-top__title">Select Location</h1>
+          <span class="results-agritech-top__leaf" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+        </header>
+
+        <p class="home-agritech-eyebrow"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Agrivision</p>
+
+        <p class="location-lead location-lead--shell">
+          Tap <strong>Use current location</strong>, or move the pin on the map, then continue.
+        </p>
+
+        <form class="location-form location-form--shell" id="location-form" action="#" method="post">
+          <div class="home-agritech-panel location-shell-panel">
+            <div class="map-glass map-glass--shell map-glass--live" id="location-map-wrap">
+              <div id="location-map" class="location-map" role="application" aria-label="Map to confirm farm location"></div>
+              <div class="location-map-hint map-glass__pin-label map-glass__pin-label--shell" id="map-hint">
+                Detecting location…
+              </div>
+            </div>
+
+            <div class="location-form-block location-form-block--shell">
+              <button
+                type="button"
+                class="btn-location-secondary btn-location-secondary--shell"
+                id="btn-gps"
+                aria-describedby="location-gps-status"
+              >
+                <span class="btn-location-secondary__gps" aria-hidden="true">
+                  <i class="fa-solid fa-satellite"></i>
+                </span>
+                <span class="btn-location-secondary__text">Use current location</span>
+                <i class="fa-solid fa-chevron-right btn-location-secondary__chev" aria-hidden="true"></i>
+              </button>
+
+              <div
+                id="location-gps-status"
+                class="location-gps-status location-gps-status--idle"
+                role="status"
+                aria-live="polite"
+              >
+                <span class="location-gps-status__icon" aria-hidden="true"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <div class="location-gps-status__body">
+                  <span class="location-gps-status__title">Ready</span>
+                  <span class="location-gps-status__msg"
+                    >Allow location, or move the pin on the map.</span
+                  >
+                </div>
+              </div>
+
+              <div class="location-coords">
+                <label class="location-field-label location-field-label--shell" for="coord-lat">Latitude</label>
+                <input
+                  class="location-coords__input"
+                  id="coord-lat"
+                  name="lat"
+                  type="number"
+                  step="any"
+                  inputmode="decimal"
+                  value=""
+                  placeholder="—"
+                  readonly
+                  required
+                />
+                <label class="location-field-label location-field-label--shell" for="coord-lon">Longitude</label>
+                <input
+                  class="location-coords__input"
+                  id="coord-lon"
+                  name="lon"
+                  type="number"
+                  step="any"
+                  inputmode="decimal"
+                  value=""
+                  placeholder="—"
+                  readonly
+                  required
+                />
+              </div>
+
+              <div class="location-submit">
+                <button type="submit" class="btn-primary btn-primary--location-cta btn-primary--shell-cta" disabled aria-disabled="true">
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <nav class="bottom-nav bottom-nav--agritech" aria-label="Main navigation">
+        <a href="app.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        <a href="results.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Results</a>
+        <a href="index.html"><i class="fa-solid fa-globe" aria-hidden="true"></i> Site</a>
+      </nav>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="js/config.js?v=18"></script>
+    <script src="js/location-flow.js?v=18"></script>
+    <script src="js/theme.js?v=18" defer></script>
+    <script src="js/pwa-register.js?v=18" defer></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#1b5e3b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <title>Agrivision — Processing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/page-loading.css" />
+  </head>
+  <body class="page-loading-agritech">
+    <div class="app app--loading-agritech app--agritech-shell">
+      <header class="top-bar top-bar--detail">
+        <a class="top-bar__back" href="location.html" aria-label="Back">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <span class="top-bar__title" aria-hidden="true"></span>
+        <span class="top-bar__spacer" aria-hidden="true"></span>
+      </header>
+
+      <main class="loading-layout">
+        <div class="loading-screen loading-screen--wireframe">
+          <h2 class="loading-screen__processing">Processing…</h2>
+          <div class="loader-dotted" role="status" aria-live="polite" aria-label="Loading"></div>
+          <p class="loading-screen__subtitle">
+            Contacting the recommendation service: soil and weather for your coordinates, then ranking crops.
+            This usually takes a few seconds.
+          </p>
+          <ul class="loading-screen__hints" aria-label="What is happening">
+            <li>Soil layers (SoilGrids) and weather (Open-Meteo) are fetched for your point.</li>
+            <li>The model blends Random Forest, SVM, and Gradient Boosting for the top recommendations.</li>
+          </ul>
+          <p class="loading-note"><a href="location.html">Cancel</a></p>
+        </div>
+      </main>
+
+      <nav class="bottom-nav bottom-nav--agritech" aria-label="Main navigation">
+        <a href="index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        <a href="results.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Results</a>
+        <a href="profile.html"><i class="fa-solid fa-user" aria-hidden="true"></i> Profile</a>
+      </nav>
+    </div>
+    <script src="js/config.js?v=16"></script>
+    <script src="js/loading-flow.js?v=16"></script>
+    <script src="js/theme.js" defer></script>
+      <script src="js/pwa-register.js" defer></script>
+  </body>
+</html>

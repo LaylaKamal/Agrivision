@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070f1a" />
+    <meta
+      name="description"
+      content="Agrivision — نظام ذكي لاختيار المحصول المناسب حسب أرضك قبل الزراعة"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="images/icon-192.svg" />
+    <title>Agrivision — الزراعة الذكية قبل الزراعة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/page-landing.css" />
+    <link rel="preload" href="images/agrivision-hero.png" as="image" />
+  </head>
+  <body class="av">
+    <header class="nav" id="nav">
+      <div class="wrap nav__row">
+        <a class="brand" href="index.html">
+          <img src="images/icon-192.svg" alt="" width="36" height="36" />
+          Agrivision
+        </a>
+        <nav class="nav__links" aria-label="القائمة">
+          <a href="#about" data-i18n="nav_about">عن Agrivision</a>
+          <a href="#problem" data-i18n="nav_problem">المشكلة</a>
+          <a href="#solution" data-i18n="nav_solution">الحل</a>
+          <a href="#features" data-i18n="nav_features">المزايا</a>
+        </nav>
+        <div class="nav__actions">
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" id="lang-ar" class="is-on">AR</button>
+            <button type="button" id="lang-en">EN</button>
+          </div>
+          <a class="btn btn--primary" href="location.html" data-i18n="nav_cta">جرّب الآن</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="about">
+        <div class="wrap hero__grid">
+          <div>
+            <h1 data-i18n="hero_title">Agrivision — الذكاء الذي يزرع بثقة</h1>
+            <p data-i18n="hero_lead">
+              نظام ذكي متكامل يساعدك تختار المحصول المناسب لأرضك قبل الزراعة، بجمع معلومات الموقع والتربة والطقس في تجربة بسيطة وواضحة.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="location.html" data-i18n="hero_cta1">جرّب التطبيق</a>
+              <a class="btn btn--ghost" href="#features" data-i18n="hero_cta2">اكتشف المزايا</a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <img src="images/agrivision-hero.png" alt="Agrivision app on the field" width="960" height="540" />
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section class="section" id="problem">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 data-i18n="prob_title">المشكلة: قرار زراعة صعب في أرض تحتاج دقة</h2>
+            <p data-i18n="prob_lead">
+              كثير من المزارعين يواجهون صعوبة في معرفة أي محصول يناسب أرضهم، فتضيع موارد ثمينة قبل ما تبدأ الزراعة.
+            </p>
+          </div>
+
+          <div class="cards-2" style="margin-bottom: 1rem">
+            <div class="panel">
+              <h3 data-i18n="prob_img_t">أرض قاسية… وقرار مصيري</h3>
+              <p style="margin: 0; color: var(--muted)" data-i18n="prob_img_d">
+                في المناطق الجافة، الخطأ في اختيار المحصول يعني هدر ماء وجهد وموسم كامل.
+              </p>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="prob_water_t">تحدي الموارد</h3>
+              <div class="stat">
+                <div class="stat__n" data-i18n="s1_n">ماء</div>
+                <p data-i18n="s1_d">اختيار محصول يحتاج ماء أكثر من اللازم يضغط على الموارد الشحيحة.</p>
+              </div>
+              <div class="stat">
+                <div class="stat__n" data-i18n="s2_n">وقت</div>
+                <p data-i18n="s2_d">التجربة والخطأ تأخذ مواسم طويلة قبل الوصول للمحصول المناسب.</p>
+              </div>
+              <div class="stat">
+                <div class="stat__n" data-i18n="s3_n">تكلفة</div>
+                <p data-i18n="s3_d">الخسارة تصل للبذور والأسمدة والجهد قبل ظهور أول نتيجة.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards-2">
+            <div class="panel">
+              <h3 data-i18n="prob_farm_t">تحدي المزارع</h3>
+              <div class="stat">
+                <div class="stat__n">؟</div>
+                <p data-i18n="s4_d">صعوبة معرفة ملاءمة التربة والطقس بدون خبرة متخصصة قريبة.</p>
+              </div>
+              <div class="stat">
+                <div class="stat__n">!</div>
+                <p data-i18n="s5_d">نصائح عامة لا تناسب كل موقع وكل موسم.</p>
+              </div>
+              <div class="stat">
+                <div class="stat__n">×</div>
+                <p data-i18n="s6_d">أدوات معقدة أو مكلفة تبعد المزارع عن استخدامها يوميًا.</p>
+              </div>
+            </div>
+            <div class="panel">
+              <h3 data-i18n="prob_future_t">تحدي المستقبل</h3>
+              <div class="stat">
+                <div class="stat__n" data-i18n="s7_n">أمن غذائي</div>
+                <p data-i18n="s7_d">قرارات زراعة أفضل تدعم إنتاجًا أكثر استقرارًا واستدامة.</p>
+              </div>
+              <div class="stat">
+                <div class="stat__n" data-i18n="s8_n">استدامة</div>
+                <p data-i18n="s8_d">كل توصية صحيحة تحافظ على الماء والأرض للأجيال القادمة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="section" id="solution">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 data-i18n="sol_title">الحل المتكامل: Agrivision</h2>
+            <p data-i18n="sol_lead">
+              نساعدك تأخذ قرار الزراعة بثقة — من موقع أرضك إلى توصية محاصيل واضحة تناسب ظروفك.
+            </p>
+          </div>
+
+          <div class="panel" style="margin-bottom: 1.25rem">
+            <h3 style="color: var(--accent)" data-i18n="sol_card_t">زراعة أوضح… من أول خطوة</h3>
+            <p style="margin: 0; color: var(--muted)" data-i18n="sol_card_d">
+              Agrivision يحول موقع أرضك إلى توصيات عملية تفهمها بسرعة، بدون تعقيد وبدون تخمين.
+            </p>
+          </div>
+
+          <div class="compare">
+            <div class="panel compare__bad">
+              <h3 data-i18n="old_t">الطريقة التقليدية</h3>
+              <ul>
+                <li data-i18n="old_1">اعتماد على التجربة والخطأ</li>
+                <li data-i18n="old_2">نصائح عامة غير مرتبطة بموقعك</li>
+                <li data-i18n="old_3">صعوبة تقدير احتياج الماء مبكرًا</li>
+              </ul>
+            </div>
+            <div class="panel compare__good">
+              <h3 data-i18n="new_t">حل Agrivision</h3>
+              <ul>
+                <li data-i18n="new_1">توصية حسب موقع أرضك</li>
+                <li data-i18n="new_2">نتائج مرتّبة وواضحة</li>
+                <li data-i18n="new_3">إرشادات عملية تساعدك قبل الزراعة</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="section" id="features">
+        <div class="wrap">
+          <div class="section__head">
+            <h2 data-i18n="feat_title">المزايا الرئيسية</h2>
+            <p data-i18n="feat_lead">كل ما تحتاجه لقرار زراعة أذكى — بخطوات بسيطة.</p>
+          </div>
+          <div class="features">
+            <article class="panel feature">
+              <h3 data-i18n="f1_t">معرفة أرضك</h3>
+              <p data-i18n="f1_d">حدد موقعك وسنبني التوصية على ظروف أرضك الفعلية.</p>
+            </article>
+            <article class="panel feature">
+              <h3 data-i18n="f2_t">توصيات واضحة</h3>
+              <p data-i18n="f2_d">محاصيل مرتّبة بنسبة ملاءمة تساعدك تقرر بسرعة.</p>
+            </article>
+            <article class="panel feature">
+              <h3 data-i18n="f3_t">سهل على الجوال</h3>
+              <p data-i18n="f3_d">استخدمه من متصفحك في أي مكان — بدون تعقيد.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section cta" id="try">
+        <div class="wrap">
+          <div class="panel">
+            <h2 data-i18n="cta_title">جاهز تختار محصولك بثقة؟</h2>
+            <p data-i18n="cta_lead">ابدأ الآن وحدد موقع أرضك خلال ثوانٍ.</p>
+            <a class="btn btn--primary" href="location.html" data-i18n="cta_btn">ابدأ التحليل</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer wrap">
+      <span>© Team Agrivision</span>
+      <a href="location.html" data-i18n="footer_cta">افتح التطبيق</a>
+    </footer>
+
+    <script>
+      (function () {
+        var T = {
+          ar: {
+            nav_about: "عن Agrivision",
+            nav_problem: "المشكلة",
+            nav_solution: "الحل",
+            nav_features: "المزايا",
+            nav_cta: "جرّب الآن",
+            hero_title: "Agrivision — الذكاء الذي يزرع بثقة",
+            hero_lead:
+              "نظام ذكي متكامل يساعدك تختار المحصول المناسب لأرضك قبل الزراعة، بجمع معلومات الموقع والتربة والطقس في تجربة بسيطة وواضحة.",
+            hero_cta1: "جرّب التطبيق",
+            hero_cta2: "اكتشف المزايا",
+            prob_title: "المشكلة: قرار زراعة صعب في أرض تحتاج دقة",
+            prob_lead:
+              "كثير من المزارعين يواجهون صعوبة في معرفة أي محصول يناسب أرضهم، فتضيع موارد ثمينة قبل ما تبدأ الزراعة.",
+            prob_img_t: "أرض قاسية… وقرار مصيري",
+            prob_img_d: "في المناطق الجافة، الخطأ في اختيار المحصول يعني هدر ماء وجهد وموسم كامل.",
+            prob_water_t: "تحدي الموارد",
+            s1_n: "ماء",
+            s1_d: "اختيار محصول يحتاج ماء أكثر من اللازم يضغط على الموارد الشحيحة.",
+            s2_n: "وقت",
+            s2_d: "التجربة والخطأ تأخذ مواسم طويلة قبل الوصول للمحصول المناسب.",
+            s3_n: "تكلفة",
+            s3_d: "الخسارة تصل للبذور والأسمدة والجهد قبل ظهور أول نتيجة.",
+            prob_farm_t: "تحدي المزارع",
+            s4_d: "صعوبة معرفة ملاءمة التربة والطقس بدون خبرة متخصصة قريبة.",
+            s5_d: "نصائح عامة لا تناسب كل موقع وكل موسم.",
+            s6_d: "أدوات معقدة أو مكلفة تبعد المزارع عن استخدامها يوميًا.",
+            prob_future_t: "تحدي المستقبل",
+            s7_n: "أمن غذائي",
+            s7_d: "قرارات زراعة أفضل تدعم إنتاجًا أكثر استقرارًا واستدامة.",
+            s8_n: "استدامة",
+            s8_d: "كل توصية صحيحة تحافظ على الماء والأرض للأجيال القادمة.",
+            sol_title: "الحل المتكامل: Agrivision",
+            sol_lead: "نساعدك تأخذ قرار الزراعة بثقة — من موقع أرضك إلى توصية محاصيل واضحة تناسب ظروفك.",
+            sol_card_t: "زراعة أوضح… من أول خطوة",
+            sol_card_d: "Agrivision يحول موقع أرضك إلى توصيات عملية تفهمها بسرعة، بدون تعقيد وبدون تخمين.",
+            old_t: "الطريقة التقليدية",
+            old_1: "اعتماد على التجربة والخطأ",
+            old_2: "نصائح عامة غير مرتبطة بموقعك",
+            old_3: "صعوبة تقدير احتياج الماء مبكرًا",
+            new_t: "حل Agrivision",
+            new_1: "توصية حسب موقع أرضك",
+            new_2: "نتائج مرتّبة وواضحة",
+            new_3: "إرشادات عملية تساعدك قبل الزراعة",
+            feat_title: "المزايا الرئيسية",
+            feat_lead: "كل ما تحتاجه لقرار زراعة أذكى — بخطوات بسيطة.",
+            f1_t: "معرفة أرضك",
+            f1_d: "حدد موقعك وسنبني التوصية على ظروف أرضك الفعلية.",
+            f2_t: "توصيات واضحة",
+            f2_d: "محاصيل مرتّبة بنسبة ملاءمة تساعدك تقرر بسرعة.",
+            f3_t: "سهل على الجوال",
+            f3_d: "استخدمه من متصفحك في أي مكان — بدون تعقيد.",
+            cta_title: "جاهز تختار محصولك بثقة؟",
+            cta_lead: "ابدأ الآن وحدد موقع أرضك خلال ثوانٍ.",
+            cta_btn: "ابدأ التحليل",
+            footer_cta: "افتح التطبيق",
+          },
+          en: {
+            nav_about: "About Agrivision",
+            nav_problem: "Problem",
+            nav_solution: "Solution",
+            nav_features: "Features",
+            nav_cta: "Try now",
+            hero_title: "Agrivision — Intelligence that plants with confidence",
+            hero_lead:
+              "An integrated smart system that helps you choose the right crop for your land before planting — using location, soil, and weather in a simple clear experience.",
+            hero_cta1: "Try the app",
+            hero_cta2: "Discover features",
+            prob_title: "The problem: a hard planting decision on land that needs precision",
+            prob_lead:
+              "Many farmers struggle to know which crop fits their land — wasting precious resources before the season even starts.",
+            prob_img_t: "Harsh land… critical choice",
+            prob_img_d: "In arid regions, the wrong crop means wasted water, effort, and a full season.",
+            prob_water_t: "Resource challenge",
+            s1_n: "Water",
+            s1_d: "A high-water crop can pressure already scarce resources.",
+            s2_n: "Time",
+            s2_d: "Trial and error can take many seasons to find the right fit.",
+            s3_n: "Cost",
+            s3_d: "Losses hit seeds, fertilizer, and labor before results appear.",
+            prob_farm_t: "Farmer challenge",
+            s4_d: "Hard to judge soil and weather fit without nearby specialist advice.",
+            s5_d: "Generic tips do not match every location and season.",
+            s6_d: "Complex or costly tools keep farmers from using them daily.",
+            prob_future_t: "Future challenge",
+            s7_n: "Food security",
+            s7_d: "Better planting decisions support more stable production.",
+            s8_n: "Sustainability",
+            s8_d: "Every right recommendation protects water and land for the next generation.",
+            sol_title: "The complete solution: Agrivision",
+            sol_lead: "We help you plant with confidence — from your land location to clear crop recommendations.",
+            sol_card_t: "Clearer farming… from step one",
+            sol_card_d: "Agrivision turns your land location into practical recommendations you understand fast.",
+            old_t: "Traditional way",
+            old_1: "Relying on trial and error",
+            old_2: "Generic advice not tied to your location",
+            old_3: "Hard to estimate water needs early",
+            new_t: "Agrivision way",
+            new_1: "Recommendations for your land location",
+            new_2: "Clear ranked results",
+            new_3: "Practical guidance before planting",
+            feat_title: "Key features",
+            feat_lead: "Everything you need for a smarter planting decision — in simple steps.",
+            f1_t: "Know your land",
+            f1_d: "Pick your location and we build advice around your real conditions.",
+            f2_t: "Clear recommendations",
+            f2_d: "Ranked crops with match scores to decide faster.",
+            f3_t: "Easy on mobile",
+            f3_d: "Use it from your browser anywhere — no complexity.",
+            cta_title: "Ready to choose your crop with confidence?",
+            cta_lead: "Start now and select your land location in seconds.",
+            cta_btn: "Start analysis",
+            footer_cta: "Open the app",
+          },
+        };
+
+        var html = document.documentElement;
+        var btnAr = document.getElementById("lang-ar");
+        var btnEn = document.getElementById("lang-en");
+
+        function apply(lang) {
+          var pack = T[lang] || T.ar;
+          document.querySelectorAll("[data-i18n]").forEach(function (el) {
+            var k = el.getAttribute("data-i18n");
+            if (pack[k]) el.textContent = pack[k];
+          });
+          html.lang = lang === "en" ? "en" : "ar";
+          html.dir = lang === "en" ? "ltr" : "rtl";
+          btnAr.classList.toggle("is-on", lang === "ar");
+          btnEn.classList.toggle("is-on", lang === "en");
+          try {
+            localStorage.setItem("agrivision-lang", lang);
+          } catch (e) {}
+        }
+
+        btnAr.addEventListener("click", function () {
+          apply("ar");
+        });
+        btnEn.addEventListener("click", function () {
+          apply("en");
+        });
+
+        var saved = "ar";
+        try {
+          saved = localStorage.getItem("agrivision-lang") || "ar";
+        } catch (e) {}
+        apply(saved);
+
+        var nav = document.getElementById("nav");
+        window.addEventListener(
+          "scroll",
+          function () {
+            nav.classList.toggle("is-on", window.scrollY > 10);
+          },
+          { passive: true }
+        );
+      })();
+    </script>
+    <script src="js/pwa-register.js" defer></script>
+  </body>
+</html>

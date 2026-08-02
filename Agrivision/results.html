@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#1b5e3b" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <title>Agrivision — Results</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/page-results.css" />
+  </head>
+  <body class="page-results-agritech">
+    <div class="app app--results-agritech app--agritech-shell">
+      <header class="results-agritech-top">
+        <a class="results-agritech-top__back" href="location.html" aria-label="Back">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <h1 class="results-agritech-top__title">Your crops</h1>
+        <span class="results-agritech-top__leaf" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+      </header>
+
+      <main class="results-ranked">
+        <section class="results-context" id="results-context-wrap" hidden>
+          <h2 class="results-context__title">About this location</h2>
+          <p class="results-context__lead" id="results-context-lead" hidden></p>
+          <div class="results-context__grid" id="results-context-grid"></div>
+        </section>
+
+        <p class="results-error" id="results-error" hidden></p>
+
+        <h2 class="results-ranked__heading">Recommendations</h2>
+        <ol class="results-ranked__list" id="results-list"></ol>
+      </main>
+
+      <nav class="bottom-nav bottom-nav--agritech" aria-label="Main navigation">
+        <a href="app.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        <a class="is-active" href="results.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Results</a>
+        <a href="index.html"><i class="fa-solid fa-globe" aria-hidden="true"></i> Site</a>
+      </nav>
+    </div>
+    <script src="js/config.js"></script>
+    <script src="js/results-flow.js?v=17"></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/pwa-register.js" defer></script>
+  </body>
+</html>

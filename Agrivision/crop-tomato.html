@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <title>AgriTech — Tomato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/page-crop.css" />
+  </head>
+  <body class="page-crop-agritech">
+    <div class="app app--crop-agritech app--no-nav">
+      <header class="crop-agritech-header">
+        <a class="crop-agritech-header__back" href="results.html" aria-label="Back">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        </a>
+        <div class="crop-agritech-header__titles">
+          <span class="crop-agritech-header__eyebrow">Crop details</span>
+          <h1 class="crop-agritech-header__title">Tomato</h1>
+        </div>
+      </header>
+
+      <div class="crop-agritech-hero">
+        <img
+          src="images/tomato-hero.png"
+          alt="Tomato plant with ripe tomatoes"
+          width="900"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="crop-agritech-body">
+        <div class="crop-agritech-grid">
+          <article class="crop-data-card">
+            <div class="crop-data-card__icon crop-data-card__icon--water" aria-hidden="true">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h2 class="crop-data-card__label">Water Needs</h2>
+            <p class="crop-data-card__value">Moderate to high</p>
+          </article>
+          <article class="crop-data-card">
+            <div class="crop-data-card__icon crop-data-card__icon--temp" aria-hidden="true">
+              <i class="fa-solid fa-temperature-half"></i>
+            </div>
+            <h2 class="crop-data-card__label">Temperature</h2>
+            <p class="crop-data-card__value">18°C – 29°C</p>
+          </article>
+          <article class="crop-data-card">
+            <div class="crop-data-card__icon crop-data-card__icon--soil" aria-hidden="true">
+              <i class="fa-solid fa-mortar-pestle"></i>
+            </div>
+            <h2 class="crop-data-card__label">Soil Type</h2>
+            <p class="crop-data-card__value">Rich, sandy loam</p>
+          </article>
+          <article class="crop-data-card crop-data-card--wide npk-panel">
+            <h2 class="npk-panel__title"><i class="fa-solid fa-flask" aria-hidden="true"></i> NPK Level</h2>
+            <div class="npk-panel__rows">
+              <div class="npk-row">
+                <span class="npk-row__letter">N</span>
+                <div class="npk-row__track">
+                  <div class="npk-row__fill" style="width: 68%"></div>
+                </div>
+                <span class="npk-row__pct">68%</span>
+              </div>
+              <div class="npk-row">
+                <span class="npk-row__letter">P</span>
+                <div class="npk-row__track">
+                  <div class="npk-row__fill" style="width: 75%"></div>
+                </div>
+                <span class="npk-row__pct">75%</span>
+              </div>
+              <div class="npk-row">
+                <span class="npk-row__letter">K</span>
+                <div class="npk-row__track">
+                  <div class="npk-row__fill" style="width: 82%"></div>
+                </div>
+                <span class="npk-row__pct">82%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <script src="js/theme.js" defer></script>
+  </body>
+</html>

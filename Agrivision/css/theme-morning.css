@@ -1,0 +1,600 @@
+
+
+.settings-list__theme {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0 4px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.theme-emoji-only {
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  font-size: 1.85rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(35, 48, 40, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  font-family: inherit;
+}
+
+.theme-emoji-only:hover {
+  background: rgba(45, 58, 50, 0.95);
+  border-color: rgba(255, 255, 255, 0.26);
+  transform: scale(1.04);
+}
+
+.theme-emoji-only:active {
+  transform: scale(0.96);
+}
+
+.theme-emoji-only:focus-visible {
+  outline: 2px solid #a5d6a7;
+  outline-offset: 3px;
+}
+
+/* --- Morning (light theme): AgriTech shell pages --- */
+html[data-theme="morning"] body.page-home-agritech {
+  background: #e8f5e9;
+}
+
+html[data-theme="morning"] body.page-crop-agritech {
+  background: #e8f5e9;
+}
+
+html[data-theme="morning"] .app--agritech-shell {
+  background:
+    radial-gradient(100% 72% at 50% -8%, rgba(129, 199, 132, 0.35) 0%, transparent 58%),
+    radial-gradient(90% 55% at 100% 42%, rgba(0, 137, 123, 0.1) 0%, transparent 52%),
+    linear-gradient(168deg, #f1f8e9 0%, #e8f5e9 45%, #dcedc8 100%);
+  box-shadow: var(--shadow-phone);
+}
+
+html[data-theme="morning"] .app--agritech-home.app--agritech-shell {
+  background: transparent;
+  box-shadow: 0 0 0 1px rgba(46, 125, 50, 0.12), 0 20px 56px rgba(46, 125, 50, 0.12);
+}
+
+html[data-theme="morning"] .home-agritech-hero-bg {
+  background-color: #f5f0e8;
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.38) 38%, transparent 58%),
+    linear-gradient(125deg, rgba(255, 252, 248, 0.62) 0%, transparent 48%),
+    linear-gradient(to top, rgba(35, 45, 30, 0.28) 0%, transparent 55%),
+    url("../images/home-hero-countryside.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-header__title {
+  color: #1b3d1e;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+html[data-theme="morning"] .home-agritech-header__menu-bar {
+  background: #1b3d1e;
+  box-shadow: none;
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-header__bell {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(46, 125, 50, 0.28);
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-eyebrow {
+  color: #1b5e20;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-eyebrow i {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-greet__name {
+  color: #1b3d1e;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95);
+}
+
+html[data-theme="morning"] .app--agritech-home .home-agritech-greet__sub {
+  color: #2e4a32;
+}
+
+html[data-theme="morning"] .app--agritech-home .btn-start-analysis {
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.95), rgba(0, 105, 92, 0.95));
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 24px rgba(46, 125, 50, 0.28);
+}
+
+html[data-theme="morning"] .app--agritech-home .btn-start-analysis:hover {
+  background: linear-gradient(135deg, #388e3c, #00796b);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.35);
+}
+
+html[data-theme="morning"] .home-agritech-header {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(174, 213, 129, 0.55);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.1);
+}
+
+html[data-theme="morning"] .home-agritech-header__title {
+  color: #1b3d1e;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .home-agritech-eyebrow {
+  color: #2e7d32;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .home-agritech-eyebrow i {
+  color: #43a047;
+}
+
+html[data-theme="morning"] .home-agritech-header__bell {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(46, 125, 50, 0.25);
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-shell .bottom-nav--agritech {
+  background: rgba(255, 255, 255, 0.94);
+  border-top: 1px solid rgba(174, 213, 129, 0.45);
+  box-shadow: 0 -6px 24px rgba(46, 125, 50, 0.08);
+}
+
+html[data-theme="morning"] .app--agritech-shell .bottom-nav--agritech a {
+  color: #78909c;
+}
+
+html[data-theme="morning"] .app--agritech-shell .bottom-nav--agritech a.is-active {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-shell .bottom-nav--agritech a:hover:not(.is-active) {
+  color: #546e7a;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--results-agritech .results-agritech-top,
+html[data-theme="morning"] .app--agritech-shell.app--location .results-agritech-top {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(174, 213, 129, 0.5);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.08);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--results-agritech .results-agritech-top__title,
+html[data-theme="morning"] .app--agritech-shell.app--location .results-agritech-top__title {
+  color: #1b3d1e;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--results-agritech .results-agritech-top__back,
+html[data-theme="morning"] .app--agritech-shell.app--location .results-agritech-top__back {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+  color: #1b5e20;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--results-agritech .results-agritech-top__leaf,
+html[data-theme="morning"] .app--agritech-shell.app--location .results-agritech-top__leaf {
+  color: #43a047;
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(174, 213, 129, 0.4);
+  box-shadow: 0 4px 18px rgba(46, 125, 50, 0.08);
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__card:hover {
+  box-shadow: 0 8px 22px rgba(46, 125, 50, 0.12);
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__card--hero {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(224, 242, 241, 0.65) 100%);
+  border: 1px solid rgba(0, 137, 123, 0.22);
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__name {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__label {
+  color: #78909c;
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__rank {
+  color: #00897b;
+}
+
+html[data-theme="morning"] .app--agritech-shell .results-ranked__icon {
+  background: linear-gradient(145deg, #e8f5e9, #b2dfdb);
+  border: none;
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .location-lead--shell {
+  color: #1b3d1e;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .map-glass--shell {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(174, 213, 129, 0.5);
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1);
+}
+
+html[data-theme="morning"] .map-glass__tint--shell {
+  background: linear-gradient(
+    165deg,
+    rgba(129, 199, 132, 0.2) 0%,
+    rgba(0, 105, 92, 0.08) 50%,
+    rgba(232, 245, 233, 0.5) 100%
+  );
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--location .map-glass__pin i {
+  color: #2e7d32;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+}
+
+html[data-theme="morning"] .map-glass__pin-label--shell {
+  color: #1b3d1e;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+}
+
+html[data-theme="morning"] .btn-location-secondary--shell {
+  color: #2e7d32;
+  border-color: rgba(46, 125, 50, 0.35);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+html[data-theme="morning"] .btn-location-secondary--shell:hover {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1b5e20;
+}
+
+html[data-theme="morning"] .btn-location-secondary--shell .btn-location-secondary__gps {
+  background: rgba(46, 125, 50, 0.12);
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .location-field-label--shell {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .search-field--shell {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(174, 213, 129, 0.55);
+}
+
+html[data-theme="morning"] .search-field--shell input {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .search-field--shell input::placeholder {
+  color: rgba(27, 61, 30, 0.45);
+}
+
+html[data-theme="morning"] .search-field--shell__icon {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .home-agritech-panel--profile-body {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(174, 213, 129, 0.5);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .profile-identity__name {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .profile-identity__hint {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .profile-section-label {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .profile-identity__avatar {
+  border-color: rgba(174, 213, 129, 0.6);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .settings-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .settings-card:hover {
+  background: #fafdf7;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-card-hover);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .settings-card__title {
+  color: var(--color-primary-dark);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .settings-card__sub {
+  color: var(--color-text-muted);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--profile-agritech .settings-card__chevron {
+  color: var(--color-primary);
+}
+
+html[data-theme="morning"] .theme-emoji-only {
+  background: #f5f5f0;
+  border: 1px solid rgba(174, 213, 129, 0.55);
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.1), 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+}
+
+html[data-theme="morning"] .theme-emoji-only:hover {
+  background: #fff;
+  border-color: rgba(46, 125, 50, 0.35);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .top-bar--detail {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .top-bar__back {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(174, 213, 129, 0.45);
+  color: #1b5e20;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loading-screen--wireframe {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loading-screen__processing {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loading-screen__subtitle {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loader-dotted {
+  border-color: rgba(46, 125, 50, 0.2);
+  border-top-color: #43a047;
+  border-right-color: rgba(0, 137, 123, 0.6);
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loading-note a {
+  color: #00897b;
+}
+
+html[data-theme="morning"] .page-results-agritech,
+html[data-theme="morning"] .page-location-agritech,
+html[data-theme="morning"] .page-profile-agritech,
+html[data-theme="morning"] .page-loading-agritech {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .app--crop-agritech {
+  background: linear-gradient(175deg, #f1f8e9 0%, #e8f5e9 50%, #dcedc8 100%);
+}
+
+html[data-theme="morning"] .crop-agritech-hero {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+  box-shadow: 0 12px 32px rgba(46, 125, 50, 0.1);
+}
+
+html[data-theme="morning"] .crop-agritech-hero img {
+  border-color: rgba(174, 213, 129, 0.35);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+html[data-theme="morning"] .crop-data-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(174, 213, 129, 0.4);
+  box-shadow: 0 4px 18px rgba(46, 125, 50, 0.06);
+}
+
+html[data-theme="morning"] .crop-data-card:hover {
+  border-color: rgba(129, 199, 132, 0.65);
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.1);
+}
+
+html[data-theme="morning"] .crop-data-card__label {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .crop-data-card__value {
+  color: #1b3d1e;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .npk-panel__title {
+  color: #2e7d32;
+  text-shadow: none;
+}
+
+html[data-theme="morning"] .npk-row__letter {
+  color: #00897b;
+}
+
+html[data-theme="morning"] .npk-row__track {
+  background: rgba(0, 0, 0, 0.08);
+  border-color: rgba(174, 213, 129, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) inset;
+}
+
+html[data-theme="morning"] .npk-row__pct {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .results-context {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+  box-shadow: 0 8px 28px rgba(46, 125, 50, 0.08);
+}
+
+html[data-theme="morning"] .results-context__title {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .results-context__lead {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .context-panel {
+  background: rgba(241, 248, 233, 0.9);
+  border: 1px solid rgba(174, 213, 129, 0.38);
+}
+
+html[data-theme="morning"] .context-panel__heading {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .context-metrics dt {
+  color: #78909c;
+}
+
+html[data-theme="morning"] .context-metrics dd {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .context-fallback-note {
+  color: #e65100;
+}
+
+html[data-theme="morning"] .results-model-line {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .results-error {
+  background: rgba(255, 235, 238, 0.95);
+  border-color: rgba(229, 115, 115, 0.6);
+  color: #c62828;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--results-agritech .results-ranked__heading {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .location-coords__input {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(174, 213, 129, 0.45);
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .location-info-card {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(174, 213, 129, 0.4);
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.08);
+}
+
+html[data-theme="morning"] .location-info-card__title {
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .location-info-card__list {
+  color: #546e7a;
+}
+
+html[data-theme="morning"] .location-info-card__list strong {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .location-gps-status {
+  background: rgba(241, 248, 233, 0.75);
+  border-color: rgba(174, 213, 129, 0.4);
+}
+
+html[data-theme="morning"] .location-gps-status__title {
+  color: #1b3d1e;
+}
+
+html[data-theme="morning"] .location-gps-status__msg {
+  color: #546166;
+}
+
+html[data-theme="morning"] .location-gps-status__icon {
+  background: rgba(232, 245, 233, 0.95);
+  color: #2e7d32;
+}
+
+html[data-theme="morning"] .location-gps-status--loading {
+  background: rgba(200, 230, 201, 0.45);
+  border-color: rgba(46, 125, 50, 0.35);
+}
+
+html[data-theme="morning"] .location-gps-status--success {
+  background: rgba(200, 230, 201, 0.65);
+  border-color: rgba(46, 125, 50, 0.4);
+}
+
+html[data-theme="morning"] .location-gps-status--success .location-gps-status__msg {
+  color: #37474f;
+}
+
+html[data-theme="morning"] .location-gps-status--neutral .location-gps-status__icon {
+  color: #f57f17;
+}
+
+html[data-theme="morning"] .location-gps-status--warning {
+  background: rgba(255, 248, 225, 0.95);
+  border-color: rgba(255, 152, 0, 0.45);
+}
+
+html[data-theme="morning"] .location-gps-status--warning .location-gps-status__title {
+  color: #e65100;
+}
+
+html[data-theme="morning"] .location-gps-status--warning .location-gps-status__msg {
+  color: #5d4037;
+}
+
+html[data-theme="morning"] .location-gps-status--warning .location-gps-status__icon {
+  background: rgba(255, 224, 178, 0.9);
+  color: #ef6c00;
+}
+
+html[data-theme="morning"] .location-gps-status--error {
+  background: rgba(255, 235, 238, 0.95);
+  border-color: rgba(229, 115, 115, 0.5);
+}
+
+html[data-theme="morning"] .location-gps-status--error .location-gps-status__title {
+  color: #c62828;
+}
+
+html[data-theme="morning"] .location-gps-status--error .location-gps-status__msg {
+  color: #6d4c41;
+}
+
+html[data-theme="morning"] .loading-screen__hints li {
+  color: #558b2f;
+}
+
+html[data-theme="morning"] .app--agritech-shell.app--loading-agritech .loading-screen__subtitle--error {
+  color: #c62828;
+}
+
+@supports not (backdrop-filter: blur(12px)) {
+  html[data-theme="morning"] .crop-agritech-hero {
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  html[data-theme="morning"] .crop-data-card {
+    background: rgba(255, 255, 255, 0.96);
+  }
+}

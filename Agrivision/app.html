@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("agritech-theme") === "morning")
+            document.documentElement.setAttribute("data-theme", "morning");
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#1b5e3b" />
+    <meta name="description" content="Agrivision — crop recommendations" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="images/icon-192.svg" type="image/svg+xml" />
+    <title>Agrivision</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/page-index.css" />
+    <link rel="preload" href="images/home-hero-countryside.png" as="image" />
+  </head>
+  <body class="page-home-agritech">
+    <div class="app app--agritech-home app--agritech-shell">
+      <div class="home-agritech-hero-bg" aria-hidden="true"></div>
+      <div class="home-agritech-stack home-agritech-stack--hero">
+        <header class="home-agritech-header home-agritech-header--hero">
+          <a class="home-agritech-header__menu" href="index.html" aria-label="Back to site" style="text-decoration:none;color:#fff;display:flex;align-items:center;justify-content:center">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          </a>
+          <h1 class="home-agritech-header__title">Agrivision</h1>
+          <span class="home-agritech-header__bell" aria-hidden="true" style="opacity:0;pointer-events:none"></span>
+        </header>
+
+        <p class="home-agritech-eyebrow"><i class="fa-solid fa-leaf" aria-hidden="true"></i> Agrivision</p>
+
+        <main class="home-agritech-main home-agritech-main--hero">
+          <section class="home-agritech-greet">
+            <h2 class="home-agritech-greet__name">Welcome</h2>
+            <p class="home-agritech-greet__sub">
+              Choose your field location to get ranked crop recommendations.
+            </p>
+          </section>
+          <div class="home-agritech-panel home-agritech-panel--cta-only home-agritech-panel--hero">
+            <div class="home-agritech-cta-wrap">
+              <a class="btn-start-analysis" href="location.html">
+                Start analysis
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <nav class="bottom-nav bottom-nav--agritech" aria-label="Main navigation">
+        <a class="is-active" href="app.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+        <a href="results.html"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Results</a>
+        <a href="index.html"><i class="fa-solid fa-globe" aria-hidden="true"></i> Site</a>
+      </nav>
+    </div>
+    <script src="js/theme.js" defer></script>
+    <script src="js/pwa-register.js" defer></script>
+  </body>
+</html>
